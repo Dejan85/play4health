@@ -9,7 +9,7 @@ function showSlide(index) {
   if (currentSlide) {
     currentSlide.classList.remove("active");
     currentSlide.classList.add("prev");
-    
+
     // Remove prev class after animation completes
     setTimeout(() => {
       currentSlide.classList.remove("prev");
