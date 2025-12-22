@@ -307,3 +307,23 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Scroll to Top Button Functionality
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Prikaži/sakrij dugme na scroll
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+});
+
+// Scroll to top na klik
+scrollToTopBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
