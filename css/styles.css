@@ -5,9 +5,9 @@
 }
 
 :root {
-    --primary: #0066CC;
-    --primary-dark: #0052A3;
-    --accent: #10B981;
+    --primary: #DC3545;
+    --primary-dark: #BB2D3B;
+    --accent: #0066CC;
     --text: #1F2937;
     --text-light: #6B7280;
     --bg-light: #F3F4F6;
@@ -179,7 +179,7 @@ p {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, #0066CC 0%, #0052A3 100%);
     color: var(--white);
     padding: 0;
     text-align: center;
@@ -364,8 +364,8 @@ section h2 {
     background-color: var(--white);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(0,102,204,0.1);
-    border-left: 4px solid var(--accent);
+    box-shadow: 0 4px 16px rgba(220,53,69,0.1);
+    border-left: 4px solid var(--primary);
 }
 
 .feature {
@@ -373,13 +373,13 @@ section h2 {
     align-items: flex-start;
     gap: 1.5rem;
     padding: 1rem;
-    background: linear-gradient(135deg, rgba(16,185,129,0.05) 0%, rgba(0,102,204,0.05) 100%);
+    background: linear-gradient(135deg, rgba(220,53,69,0.05) 0%, rgba(187,45,59,0.05) 100%);
     border-radius: 0.5rem;
     transition: all 0.3s ease;
 }
 
 .feature:hover {
-    background: linear-gradient(135deg, rgba(16,185,129,0.1) 0%, rgba(0,102,204,0.1) 100%);
+    background: linear-gradient(135deg, rgba(220,53,69,0.1) 0%, rgba(187,45,59,0.1) 100%);
     padding-left: 1.5rem;
 }
 
@@ -431,7 +431,7 @@ section h2 {
 .product-description {
     background-color: var(--bg-light);
     padding: 2rem;
-    border-left: 4px solid var(--accent);
+    border-left: 4px solid var(--primary);
     border-radius: 0.5rem;
     margin-top: 1.5rem;
     color: var(--text);
@@ -662,9 +662,9 @@ section h2 {
 }
 
 .service-description {
-    background: linear-gradient(135deg, var(--bg-light) 0%, rgba(16,185,129,0.05) 100%);
+    background: linear-gradient(135deg, var(--bg-light) 0%, rgba(220,53,69,0.05) 100%);
     padding: 2rem;
-    border-left: 4px solid var(--accent);
+    border-left: 4px solid var(--primary);
     border-radius: 0.5rem;
     margin-bottom: 2rem;
 }
@@ -714,10 +714,10 @@ section h2 {
 }
 
 .service-card {
-    background: linear-gradient(135deg, var(--bg-light) 0%, rgba(16,185,129,0.05) 100%);
+    background: linear-gradient(135deg, var(--bg-light) 0%, rgba(220,53,69,0.05) 100%);
     padding: 2rem;
     border-radius: 0.75rem;
-    border-left: 4px solid var(--accent);
+    border-left: 4px solid var(--primary);
     transition: all 0.3s ease;
 }
 
@@ -762,7 +762,7 @@ section h2 {
     padding: 2rem;
     border-radius: 0.75rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-top: 4px solid var(--accent);
+    border-top: 4px solid var(--primary);
     transition: all 0.3s ease;
 }
 
@@ -844,7 +844,7 @@ section h2 {
     content: "✓";
     position: absolute;
     left: 0;
-    color: var(--accent);
+    color: var(--primary);
     font-weight: bold;
 }
 
@@ -855,10 +855,10 @@ section h2 {
 }
 
 .example-box {
-    background: linear-gradient(135deg, var(--bg-light) 0%, rgba(16,185,129,0.05) 100%);
+    background: linear-gradient(135deg, var(--bg-light) 0%, rgba(220,53,69,0.05) 100%);
     padding: 1.5rem;
     border-radius: 0.75rem;
-    border-left: 4px solid var(--accent);
+    border-left: 4px solid var(--primary);
     transition: all 0.3s ease;
 }
 
