@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0052A3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="600" fill="url(#bg1)"/>
+  
+  <!-- 3D Printer -->
+  <g transform="translate(400, 150)">
+    <!-- Printer Frame -->
+    <rect x="50" y="80" width="200" height="200" fill="none" stroke="#10B981" stroke-width="3" rx="5"/>
+    
+    <!-- Build Platform -->
+    <rect x="60" y="240" width="180" height="15" fill="#10B981" opacity="0.7"/>
+    
+    <!-- Nozzle -->
+    <circle cx="150" cy="75" r="12" fill="#FF6B6B"/>
+    <rect x="145" y="55" width="10" height="20" fill="#666"/>
+    
+    <!-- Heating Element -->
+    <circle cx="150" cy="240" r="8" fill="#FFB84D"/>
+    
+    <!-- Extruder Arm -->
+    <rect x="130" y="50" width="40" height="15" fill="#666" rx="3"/>
+    <circle cx="175" cy="57" r="8" fill="#10B981"/>
+    
+    <!-- Building Object (Medical model) -->
+    <path d="M 140 180 L 130 140 L 150 120 L 170 140 L 160 180 Z" fill="#10B981" opacity="0.5" stroke="#10B981" stroke-width="2"/>
+    
+    <!-- Details -->
+    <line x1="60" y1="90" x2="240" y2="90" stroke="#10B981" stroke-width="2"/>
+    <circle cx="70" cy="170" r="6" fill="#FFB84D"/>
+    <circle cx="220" cy="170" r="6" fill="#FFB84D"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="600" y="320" font-size="48" font-weight="bold" fill="white" text-anchor="middle">3D Printing Innovation</text>
+  <text x="600" y="370" font-size="24" fill="rgba(255,255,255,0.9)" text-anchor="middle">Advanced Medical Device Manufacturing</text>
+</svg>

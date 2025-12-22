@@ -29,12 +29,30 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Carousel -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Innovative 3D Medical Solutions</h1>
-            <p>We develop and apply the latest 3D technologies in cardiovascular medicine</p>
-            <a href="#contact" class="btn btn-primary">Contact Us</a>
+        <!-- Carousel -->
+        <div class="carousel">
+            <div class="carousel-slide active">
+                <img src="assets/images/3d-printing.svg" alt="3D Printing Innovation">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/cardiovascular.svg" alt="Cardiovascular Focus">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/research.svg" alt="Research & Innovation">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/technology.svg" alt="Medical Technology">
+            </div>
+            
+            <!-- Carousel Controls -->
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
         </div>
     </section>
 

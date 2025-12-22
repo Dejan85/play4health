@@ -1,0 +1,35 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004399;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="600" fill="url(#bg2)"/>
+  
+  <!-- Cardiovascular Heart -->
+  <g transform="translate(350, 150)">
+    <!-- Main Heart Shape -->
+    <path d="M 150 280 C 150 280, 80 240, 80 180 C 80 140, 110 110, 140 110 C 160 110, 175 125, 150 145 C 125 125, 140 110, 160 110 C 190 110, 220 140, 220 180 C 220 240, 150 280, 150 280 Z" fill="#FF6B6B" opacity="0.8"/>
+    
+    <!-- Pulse Wave -->
+    <path d="M 50 280 Q 80 270 100 280 T 150 280 T 200 280 T 250 280" stroke="#10B981" stroke-width="3" fill="none"/>
+    
+    <!-- Artery Lines -->
+    <line x1="140" y1="110" x2="100" y2="50" stroke="#FFB84D" stroke-width="2"/>
+    <line x1="160" y1="110" x2="200" y2="50" stroke="#FFB84D" stroke-width="2"/>
+    <line x1="150" y1="280" x2="150" y2="340" stroke="#10B981" stroke-width="2"/>
+    
+    <!-- Blood Cells (circles) -->
+    <circle cx="110" cy="160" r="4" fill="#FFB84D" opacity="0.7"/>
+    <circle cx="130" cy="140" r="4" fill="#FFB84D" opacity="0.7"/>
+    <circle cx="170" cy="140" r="4" fill="#FFB84D" opacity="0.7"/>
+    <circle cx="190" cy="160" r="4" fill="#FFB84D" opacity="0.7"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="600" y="320" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Cardiovascular Focus</text>
+  <text x="600" y="370" font-size="24" fill="rgba(255,255,255,0.9)" text-anchor="middle">Specialized 3D Medical Solutions</text>
+</svg>

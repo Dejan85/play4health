@@ -1,3 +1,32 @@
+// Carousel Functionality
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll(".carousel-slide");
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index) {
+  // Remove active class from all slides and dots
+  slides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("active"));
+
+  // Add active class to current slide and dot
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+
+  currentSlideIndex = index;
+}
+
+function nextSlide() {
+  let nextIndex = (currentSlideIndex + 1) % slides.length;
+  showSlide(nextIndex);
+}
+
+function currentSlide(index) {
+  showSlide(index);
+}
+
+// Auto-rotate carousel every 5 seconds
+setInterval(nextSlide, 5000);
+
 // Product Details Modal
 const productDetails = {
   1: {
