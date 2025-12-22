@@ -13,7 +13,7 @@ function showSlide(index) {
     // Remove prev class after animation completes
     setTimeout(() => {
       currentSlide.classList.remove("prev");
-    }, 1500);
+    }, 2500);
   }
 
   // Remove active class from all dots

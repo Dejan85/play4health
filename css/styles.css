@@ -212,11 +212,11 @@ p {
 
 .carousel-slide.active {
     display: block;
-    animation: pixelateIn 1.5s ease-in-out forwards;
+    animation: pixelateIn 2.5s ease-in-out forwards;
 }
 
 .carousel-slide.prev {
-    animation: pixelateOut 1.5s ease-in-out forwards;
+    animation: pixelateOut 2.5s ease-in-out forwards;
 }
 
 .carousel-slide img {
