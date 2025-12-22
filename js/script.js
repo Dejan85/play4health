@@ -4,11 +4,22 @@ const slides = document.querySelectorAll(".carousel-slide");
 const dots = document.querySelectorAll(".dot");
 
 function showSlide(index) {
-  // Remove active class from all slides and dots
-  slides.forEach((slide) => slide.classList.remove("active"));
+  // Remove prev class and add it to current active slide before switching
+  const currentSlide = document.querySelector(".carousel-slide.active");
+  if (currentSlide) {
+    currentSlide.classList.remove("active");
+    currentSlide.classList.add("prev");
+    
+    // Remove prev class after animation completes
+    setTimeout(() => {
+      currentSlide.classList.remove("prev");
+    }, 1500);
+  }
+
+  // Remove active class from all dots
   dots.forEach((dot) => dot.classList.remove("active"));
 
-  // Add active class to current slide and dot
+  // Add active class to new slide and dot
   slides[index].classList.add("active");
   dots[index].classList.add("active");
 
