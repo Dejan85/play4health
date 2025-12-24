@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 :root {
     --primary: #DC3545;
     --primary-dark: #BB2D3B;
@@ -20,6 +25,7 @@ body {
     color: var(--text);
     line-height: 1.6;
     background-color: var(--white);
+    overflow-x: hidden;
 }
 
 .container {
@@ -69,6 +75,20 @@ p {
     align-items: center;
     padding: 1rem 20px;
     gap: 0;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .navbar .container {
+        padding: 0.75rem 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar .container {
+        padding: 0.75rem 10px;
+    }
 }
 
 .nav-brand {
@@ -91,6 +111,26 @@ p {
     display: block;
     transition: transform 0.3s ease;
     flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .logo {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 150px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        max-width: 120px;
+        height: 35px;
+    }
 }
 
 .nav-brand:hover .logo {
@@ -297,6 +337,20 @@ p {
     border-radius: 10px;
     backdrop-filter: blur(5px);
     max-width: 800px;
+}
+
+@media (max-width: 600px) {
+    .hero-content {
+        padding: 3rem 1.5rem;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 2rem 1rem;
+        max-width: 98%;
+    }
 }
 
 .hero-content h1 {
@@ -525,6 +579,24 @@ section h2 {
     max-width: 700px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     animation: slideDown 0.3s ease;
+    width: 90%;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        margin: 20% auto;
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-content {
+        margin: 30% auto;
+        padding: 1rem;
+        max-width: 95%;
+        width: 95%;
+    }
 }
 
 .modal.show {
@@ -1150,15 +1222,58 @@ section h2 {
     .products-grid,
     .services-grid {
         gap: 1rem;
+        grid-template-columns: 1fr;
     }
 
     .product-card,
     .service-card {
         padding: 1.5rem;
+        width: 100%;
+        min-width: 0;
     }
 
     .nav-brand h1 {
         font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding: 0 12px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .products-grid,
+    .services-grid,
+    .contact-content,
+    .mission-vision {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+
+    .product-card,
+    .service-card {
+        padding: 1rem;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .product-description {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .navbar .container {
+        padding: 0.75rem 12px;
+    }
+
+    .nav-menu {
+        top: 60px;
     }
 }
 
