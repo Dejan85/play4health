@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 60" width="300" height="60">
+    <!-- Heart icon -->
+    <defs>
+        <style>
+            .logo-text { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 700; font-size: 24px; }
+            .logo-heart { fill: #DC3545; }
+        </style>
+    </defs>
+    
+    <!-- Heart shape -->
+    <path class="logo-heart" d="M20,25 C20,20 24,16 29,16 C32,16 35,18 36,21 C37,18 40,16 43,16 C48,16 52,20 52,25 C52,35 36,45 36,45 C36,45 20,35 20,25 Z"/>
+    
+    <!-- Text -->
+    <text x="60" y="38" class="logo-text" fill="#DC3545">SMART HEALTH</text>
+</svg>
