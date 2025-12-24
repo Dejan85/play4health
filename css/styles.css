@@ -6,7 +6,6 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 :root {
@@ -76,7 +75,6 @@ p {
     padding: 1rem 20px;
     gap: 0;
     max-width: 100%;
-    overflow: hidden;
 }
 
 @media (max-width: 480px) {
