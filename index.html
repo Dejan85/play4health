@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMART HEALTH - Innovative 3D Medical Solutions</title>
+    <title data-lang-en="SMART HEALTH - Innovative 3D Medical Solutions" data-lang-sr="SMART HEALTH - Inovativna 3D medicinska rešenja">SMART HEALTH - Innovative 3D Medical Solutions</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -20,21 +20,26 @@
         <div class="container">
             <div class="nav-brand">
                 <img src="assets/logo-red.svg" alt="SMART HEALTH Logo" class="logo">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#our-projects">Our Projects</a></li>
-                <li><a href="#research-development">Research & Development</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-lang-en="Home" data-lang-sr="Početna">Home</a></li>
+                <li><a href="#about" data-lang-en="About Us" data-lang-sr="O nama">About Us</a></li>
+                <li><a href="#products" data-lang-en="Products" data-lang-sr="Proizvodi">Products</a></li>
+                <li><a href="#services" data-lang-en="Services" data-lang-sr="Usluge">Services</a></li>
+                <li><a href="#our-projects" data-lang-en="Our Projects" data-lang-sr="Naši projekti">Our Projects</a></li>
+                <li><a href="#research-development" data-lang-en="Research & Development" data-lang-sr="Istraživanje i razvoj">Research & Development</a></li>
+                <li><a href="#contact" data-lang-en="Contact" data-lang-sr="Kontakt">Contact</a></li>
+                <li class="lang-toggle-item">
+                    <button id="langToggle" class="lang-toggle" aria-label="Change Language">
+                        <span class="lang-text">SR</span>
+                    </button>
+                </li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
@@ -68,40 +73,57 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Us</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p><strong>SMART HEALTH DOO</strong> is an innovative company founded at the Institute for Cardiovascular Diseases "Dedinje". We specialize in developing and commercializing medical equipment and services through the application of the latest 3D technologies.</p>
-                    <p>Our mission is to accelerate the implementation of new diagnostic and therapeutic approaches, improve prevention and medical personnel education through advanced 3D medical models and products.</p>
-                </div>
-                <div class="about-features">
-                    <div class="feature">
-                        <i class="fas fa-cube"></i>
-                        <h3>3D Printing</h3>
-                        <p>Using Stratasys J5 Digital Anatomy printer - the only one of its kind in Serbia</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-heartbeat"></i>
-                        <h3>Medical Application</h3>
-                        <p>All products tested in real hospital conditions</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-flask"></i>
-                        <h3>Research</h3>
-                        <p>Clinically grounded research and development</p>
-                    </div>
-                </div>
+            <h2 data-lang-en="About Us" data-lang-sr="O nama">About Us</h2>
+            <div class="about-intro">
+                <p><strong>SMARTHEALT (SMART HEALTH d.o.o.)</strong> <span data-lang-en="is a spin-off company of the Institute for Cardiovascular Diseases &quot;Dedinje&quot;, established as a research and development center with a clear goal: to transform innovations from medicine and technology into concrete, clinically applicable solutions – products, tools, and services that improve diagnostics, treatment, education, and organization of work in healthcare institutions." data-lang-sr="je spin-off kompanija Instituta za kardiovaskularne bolesti &quot;Dedinje&quot;, osnovna kao razvojno-istraživački centar sa jasnim ciljem: da inovacije iz medicine i tehnologije pretvori u konkretna, klinički primenljiva rešenja – proizvode, alate i usluge koje unapređuju dijagnostiku, lečenje, edukaciju i organizaciju rada u zdravstvenim ustanovama.">is a spin-off company of the Institute for Cardiovascular Diseases "Dedinje", established as a research and development center with a clear goal: to transform innovations from medicine and technology into concrete, clinically applicable solutions – products, tools, and services that improve diagnostics, treatment, education, and organization of work in healthcare institutions.</span></p>
+            </div>
+
+            <!-- What We Do Section -->
+            <div class="what-we-do">
+                <h3 data-lang-en="What We Do:" data-lang-sr="Šta radimo:">What We Do:</h3>
+                <ul class="we-do-list">
+                    <li data-lang-en="Development of medical devices, products, and auxiliary equipment" data-lang-sr="Razvoj medicinskih uređaja, proizvoda i pomoćne opreme">Development of medical devices, products, and auxiliary equipment</li>
+                    <li data-lang-en="Personalized anatomical models from DICOM images (education and preoperative preparation)" data-lang-sr="Personalizovani anatomski modeli iz DICOM snimaka (edukacija i preoperativna priprema)">Personalized anatomical models from DICOM images (education and preoperative preparation)</li>
+                    <li data-lang-en="Reverse engineering and production of parts for medical equipment (when spare parts are no longer available)" data-lang-sr="Reverzni inženjering i izrada delova za medicinsku opremu (kada rezervni delovi ne postoje)">Reverse engineering and production of parts for medical equipment (when spare parts are no longer available)</li>
+                    <li data-lang-en="Education and training programs (including first aid programs for sudden cardiac arrest)" data-lang-sr="Edukacije i programi obuka (uključujući programe prve pomoći kod iznenadnog srčanog zastoja)">Education and training programs (including first aid programs for sudden cardiac arrest)</li>
+                    <li data-lang-en="Support for clinical research and development of CRO capacity" data-lang-sr="Podrška kliničkim istraživanjima i razvoj CRO kapaciteta">Support for clinical research and development of CRO capacity</li>
+                </ul>
             </div>
 
             <!-- Mission & Vision -->
             <div class="mission-vision">
                 <div class="mission-box">
-                    <h3><i class="fas fa-target"></i> Mission</h3>
-                    <p>We develop and transfer innovations in cardiovascular medicine into real clinical practice through clinically grounded research, development of health technologies and digital solutions. Our mission is to accelerate the implementation of new diagnostic and therapeutic approaches, improve prevention and rehabilitation.</p>
+                    <h3><i class="fas fa-target"></i> <span data-lang-en="Mission" data-lang-sr="Misija">Mission</span></h3>
+                    <p data-lang-en="We develop and transfer innovations in cardiovascular medicine into real clinical practice through clinically founded research, development of health technologies and digital solutions – with the aim of personalizing, more efficient and safer patient care." data-lang-sr="Razvijamo i prenosimo inovacije u kardiovaskularnoj medicini u realnu kliničku praksu kroz klinički utemeljenja istraživanja, razvoj zdravstvenih tehnologija i digitalnih rešenja – sa ciljem personalizovanje, efikasnije i sigurnije nege pacijenata.">We develop and transfer innovations in cardiovascular medicine into real clinical practice through clinically founded research, development of health technologies and digital solutions – with the aim of personalizing, more efficient and safer patient care.</p>
                 </div>
                 <div class="vision-box">
-                    <h3><i class="fas fa-eye"></i> Vision</h3>
-                    <p>To become a leading regional partner for the development and commercialization of health technologies in cardiovascular medicine. We aim to market innovations with global potential from Serbia and strengthen scientific and technological capacity through Horizon Europe and international programs.</p>
+                    <h3><i class="fas fa-eye"></i> <span data-lang-en="Vision" data-lang-sr="Vizija">Vision</span></h3>
+                    <p data-lang-en="To become a leading regional partner for the development and commercialization of health technologies in cardiovascular medicine, recognized for the number of validated solutions and international networking through relevant programs and initiatives." data-lang-sr="Da postanemo vodeći regionalni partner za razvoj i komercijalizaciju zdravstvenih tehnologija u kardiovaskularnoj medicini, prepoznat po broju validaciji rešenja i međunarodnoj umreženosti kroz relevantne programe i inicijative.">To become a leading regional partner for the development and commercialization of health technologies in cardiovascular medicine, recognized for the number of validated solutions and international networking through relevant programs and initiatives.</p>
+                </div>
+            </div>
+
+            <!-- Three Main Categories -->
+            <div class="main-categories">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3 data-lang-en="3D Lab" data-lang-sr="3D Lab">3D Lab</h3>
+                    <p data-lang-en="We use advanced 3D technologies for creating anatomical models and functional prototypes with high fidelity." data-lang-sr="Koristimo napredne 3D tehnologije za izradu anatomskih modela i funkcionalnih prototipova visoke verodostojnosti.">We use advanced 3D technologies for creating anatomical models and functional prototypes with high fidelity.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3 data-lang-en="Clinical Application" data-lang-sr="Klinička primena">Clinical Application</h3>
+                    <p data-lang-en="Solutions are developed in direct collaboration with doctors and medical staff – from problems in practice to usable products." data-lang-sr="Rešenja nastaju u direktnoj saradnji sa lekarima i medicinskim osobljem – od problema u praksi do upotrebljivog proizvoda.">Solutions are developed in direct collaboration with doctors and medical staff – from problems in practice to usable products.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 data-lang-en="Research and Development" data-lang-sr="Istraživanje i razvoj">Research and Development</h3>
+                    <p data-lang-en="We develop technologies and services through clinically founded research, interdisciplinary teams, and collaboration with partners in Serbia and abroad." data-lang-sr="Razvijamo tehnologije i usluge kroz klinički utemeljena istraživanja, interdisciplinarne timove i saradnju sa partnerima u Srbiji i inostranstvu.">We develop technologies and services through clinically founded research, interdisciplinary teams, and collaboration with partners in Serbia and abroad.</p>
                 </div>
             </div>
         </div>
@@ -110,80 +132,56 @@
     <!-- Products Section -->
     <section id="products" class="products">
         <div class="container">
-            <h2>Products</h2>
-            <p class="section-subtitle">Innovative products for healthcare institutions</p>
+            <h2 data-lang-en="Products" data-lang-sr="Proizvodi">Products</h2>
+            <p class="section-subtitle" data-lang-en="Our products are created in 3D laboratories and development teams, in constant collaboration with clinical practice. Designed to improve safety, organization and work efficiency in hospital environments, with fast adaptation to real user needs." data-lang-sr="Naši proizvodi nastaju u 3D laboratoriji i razvojnim timovima, uz stalnu saradnju sa kliničkom praksom. Dizajnirani su da poboljšaju bezbednost, organizaciju i efikasnost rada u bolničkom okruženju, uz brzo prilagođavanje stvarnim potrebama korisnika.">Our products are created in 3D laboratories and development teams, in constant collaboration with clinical practice. Designed to improve safety, organization and work efficiency in hospital environments, with fast adaptation to real user needs.</p>
             
-            <!-- Category 1: 3D Printing -->
+            <!-- Category: 3D Printing Products -->
             <div class="product-category">
-                <h3 class="category-title">3D Printing</h3>
-                <div class="products-grid">
-                    <div class="product-card" data-product-id="1">
-                        <div class="product-icon">
-                            <i class="fas fa-trash"></i>
+                <h3 class="category-title" data-lang-en="3D Printing" data-lang-sr="3D štampanje">3D Printing</h3>
+                
+                <div class="products-grid-two">
+                    <!-- Card 1: Medical Equipment -->
+                    <div class="product-card-large">
+                        <div class="product-icon-large">
+                            <i class="fas fa-hospital-alt"></i>
                         </div>
-                        <h3>Waste Container Holders</h3>
-                        <p>Holders for infectious waste containers (3L and 4L)</p>
-                        <p class="product-desc">Specially designed for safety in hospital environments</p>
-                        <button class="btn-details">Learn More</button>
+                        <h3 data-lang-en="Medical Equipment" data-lang-sr="Medicinska oprema">Medical Equipment</h3>
+                        <ul class="product-list">
+                            <li data-lang-en="Holders for infectious waste containers (3L and 4L)" data-lang-sr="Nosači za kantice za infektivni otpad (3L i 4L)">Holders for infectious waste containers (3L and 4L)</li>
+                            <li data-lang-en="Wall-mounted holder for glove boxes" data-lang-sr="Zidni nosač za kutije rukavica">Wall-mounted holder for glove boxes</li>
+                            <li data-lang-en="Holder for medical geese" data-lang-sr="Nosač za medicinske guške">Holder for medical geese</li>
+                            <li data-lang-en="Medicine label holders for operating room carts" data-lang-sr="Nosači nalepnica lekova za kolica u operacionim salama">Medicine label holders for operating room carts</li>
+                            <li data-lang-en="Laptop holder in operating room" data-lang-sr="Nosač za laptop u operacionoj sali">Laptop holder in operating room</li>
+                            <li data-lang-en="Remote holder with panic button" data-lang-sr="Nosač za daljinski sa &quot;panic&quot; tasterom">Remote holder with "panic" button</li>
+                        </ul>
                     </div>
 
-                    <div class="product-card" data-product-id="2">
-                        <div class="product-icon">
-                            <i class="fas fa-box"></i>
+                    <!-- Card 2: Educational Products -->
+                    <div class="product-card-large">
+                        <div class="product-icon-large">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <h3>Glove Box Holder</h3>
-                        <p>Wall-mounted holder for disposable medical glove boxes</p>
-                        <p class="product-desc">Practical access to medical protective equipment</p>
-                        <button class="btn-details">Learn More</button>
+                        <h3 data-lang-en="Educational Products" data-lang-sr="Edukativni proizvodi">Educational Products</h3>
+                        <div class="product-highlight">
+                            <h4 data-lang-en="VAK – Vascular Anastomosis Kit" data-lang-sr="VAK – Vascular Anastomosis Kit">VAK – Vascular Anastomosis Kit</h4>
+                            <p data-lang-en="Educational set for training and demonstration of vascular surgical techniques – intended for training, education and standardization of skills." data-lang-sr="Edukacioni set za obuku i demonstraciju vaskularnih hirurških tehnika – namenjen treningu, edukaciji i standardizaciji veština.">Educational set for training and demonstration of vascular surgical techniques – intended for training, education and standardization of skills.</p>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="product-card" data-product-id="3">
-                        <div class="product-icon">
-                            <i class="fas fa-toolbox"></i>
-                        </div>
-                        <h3>Medical Instrument Holder</h3>
-                        <p>Ergonomically designed for hospital needs</p>
-                        <p class="product-desc">Facilitates access to medical instruments</p>
-                        <button class="btn-details">Learn More</button>
-                    </div>
-
-                    <div class="product-card" data-product-id="4">
-                        <div class="product-icon">
-                            <i class="fas fa-prescription-bottle"></i>
-                        </div>
-                        <h3>Medicine Label Holder</h3>
-                        <p>Holder for medication carts in operating rooms</p>
-                        <p class="product-desc">Improves organization in the operating room</p>
-                        <button class="btn-details">Learn More</button>
-                    </div>
-
-                    <div class="product-card" data-product-id="5">
-                        <div class="product-icon">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <h3>Laptop Holder</h3>
-                        <p>Holder for laptop in operating room</p>
-                        <p class="product-desc">Enables access to digital information during operations</p>
-                        <button class="btn-details">Learn More</button>
-                    </div>
-
-                    <div class="product-card" data-product-id="6">
-                        <div class="product-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3>VAK - Vascular Kit</h3>
-                        <p>Vascular anastomosis kit for education</p>
-                        <p class="product-desc">Training and demonstration of vascular surgical techniques</p>
-                        <button class="btn-details">Learn More</button>
-                    </div>
+                <!-- VAK PRO - In Development -->
+                <div class="product-development">
+                    <div class="dev-badge" data-lang-en="In Development" data-lang-sr="U razvoju">In Development</div>
+                    <h4 data-lang-en="VAK PRO (under development)" data-lang-sr="VAK PRO (u razvoju)">VAK PRO (under development)</h4>
+                    <p data-lang-en="The next generation set with improved material fidelity and feel of working &quot;by hand&quot;, with planned technological improvement of equipment and materials." data-lang-sr="Sledeća generacija seta sa unapređenom verodostojnošću materijala i osećaja rada &quot;pod rukom&quot;, uz planirano tehnološko unapređenje opreme i materijala.">The next generation set with improved material fidelity and feel of working "by hand", with planned technological improvement of equipment and materials.</p>
                 </div>
             </div>
 
-            <!-- Category 2: Supplements -->
+            <!-- Category: Supplements -->
             <div class="product-category">
-                <h3 class="category-title">Supplements</h3>
+                <h3 class="category-title" data-lang-en="Supplements" data-lang-sr="Suplementi">Supplements</h3>
                 <div class="product-description">
-                    <p>Development of nutritional supplements based on natural, locally sourced raw materials by integrating scientific evidence with traditional knowledge. A particular focus will be on supplements designed for cardiovascular prevention, recovery, and support for patients after myocardial infarction or other heart conditions.</p>
+                    <p data-lang-en="Development of concepts and formulations based on scientific evidence and local raw materials, with a focus on supporting prevention and recovery in cardiovascular patients (with clear separation from medicines and in accordance with regulations)." data-lang-sr="Razvoj koncepata i formulacija zasnovanih na naučnim dokazima i lokalnim sirovinama, sa fokusom na podršku prevenciji i oporavku kod kardiovaskularnih pacijenata (uz jasno razdvajanje od lekova i u skladu sa regulativom).">Development of concepts and formulations based on scientific evidence and local raw materials, with a focus on supporting prevention and recovery in cardiovascular patients (with clear separation from medicines and in accordance with regulations).</p>
                 </div>
             </div>
         </div>
@@ -192,64 +190,53 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Services</h2>
-            <p class="section-subtitle">Complete solutions for healthcare institutions</p>
+            <h2 data-lang-en="Services" data-lang-sr="Usluge">Services</h2>
+            <p class="section-subtitle" data-lang-en="We provide complete 'from idea to solution' service for healthcare institutions and partners – from identifying needs and design, through prototypes and testing, to implementation." data-lang-sr="Pružamo kompletnu uslugu 'od ideje do rešenja' za zdravstvene ustanove i partnere – od snimanja potrebe i dizajna, preko prototipa i testiranja, do implementacije.">We provide complete "from idea to solution" service for healthcare institutions and partners – from identifying needs and design, through prototypes and testing, to implementation.</p>
             
-            <!-- Category 1: Digital Technologies -->
+            <!-- Category 1: 3D Technologies -->
             <div class="service-category">
-                <h3 class="category-title">Digital Technologies and 3D Printing</h3>
-                <div class="service-description">
-                    <p>Development of 3D models for the training of doctors and medical staff, AI solutions, gaming/VR/AR applications, and other emerging trends.</p>
-                </div>
-            </div>
-
-            <!-- Category 2: Core Medical Services -->
-            <div class="service-category">
-                <div class="services-grid">
+                <h3 class="category-title" data-lang-en="3D Technologies" data-lang-sr="3D tehnologije">3D Technologies</h3>
+                
+                <div class="services-grid-two">
                     <div class="service-card">
                         <div class="service-number">01</div>
-                        <h4>Reverse Engineering</h4>
-                        <p>Reconstruction of medical equipment parts for which spare parts no longer exist. Extends the life of existing equipment and reduces procurement costs.</p>
+                        <h4 data-lang-en="Reverse Engineering" data-lang-sr="Reverzni inženjering">Reverse Engineering</h4>
+                        <p data-lang-en="Production of parts and components of medical equipment for which spare parts no longer exist. Extending the life of devices, reducing costs and returning equipment to function in a short time." data-lang-sr="Izrada delova i komponenti medicinske opreme za koje više ne postoje rezervni delovi. Produžavanje životnog veka uređaja, smanjenje troškova i vraćanje opreme u funkciju u kratkom roku.">Production of parts and components of medical equipment for which spare parts no longer exist. Extending the life of devices, reducing costs and returning equipment to function in a short time.</p>
                     </div>
 
                     <div class="service-card">
                         <div class="service-number">02</div>
-                        <h4>Personalized 3D Models</h4>
-                        <p>Production of high-fidelity models from DICOM files for education, training and preoperative preparation. Directly improves safety and efficiency of surgical interventions.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-number">03</div>
-                        <h4>Education Services</h4>
-                        <p>Comprehensive training programs for medical personnel using 3D technologies. Improves skills and knowledge of surgeons and medical staff.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-number">04</div>
-                        <h4>Design & Prototyping</h4>
-                        <p>From idea to finished prototype. Complete development of innovative medical products with detailed technical and financial planning.</p>
+                        <h4 data-lang-en="Personalized 3D Models" data-lang-sr="Personalizovani 3D modeli">Personalized 3D Models</h4>
+                        <p data-lang-en="Production of anatomical models from DICOM data: segmentation, design and 3D printing. Models can be used for education, training and preoperative planning." data-lang-sr="Zrada anatomskih modela iz DICOM podataka: segmentacija, dizajn i 3D štampa. Modeli se mogu koristiti za edukaciju, trening i preoperativno planiranje.">Production of anatomical models from DICOM data: segmentation, design and 3D printing. Models can be used for education, training and preoperative planning.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Category 3: CRO -->
+            <!-- Category 2: CRO -->
             <div class="service-category">
-                <h3 class="category-title">CRO (Clinical Research Organization)</h3>
+                <h3 class="category-title" data-lang-en="CRO (Clinical Research Organization)" data-lang-sr="CRO (Organizacija za klinička istraživanja)">CRO (Clinical Research Organization)</h3>
                 <div class="service-description">
-                    <p>A clinical research centre that will enable the conduct of clinical trials in rehabilitation, biomedicine, and nutrition, while developing new therapeutic protocols and supporting translational medicine in real-world settings.</p>
+                    <p data-lang-en="Development of a clinical research framework for conducting clinical trials, with support for the development of new protocols and translational medicine in a real environment." data-lang-sr="Razvoj kliničko-istraživačkog okvira za sprovođenje kliničkih ispitivanja, uz podršku razvoju novih protokola i translacionoj medicini u realnom okruženju.">Development of a clinical research framework for conducting clinical trials, with support for the development of new protocols and translational medicine in a real environment.</p>
                 </div>
             </div>
 
-            <!-- Category 4: Education and Training -->
+            <!-- Category 3: Education and Training -->
             <div class="service-category">
-                <h3 class="category-title">Education and Training</h3>
+                <h3 class="category-title" data-lang-en="Education and Training" data-lang-sr="Edukacija i obuke">Education and Training</h3>
                 <div class="service-description">
-                    <p>Courses, workshops, continuing medical education (CME), and specialized training in cardiovascular medicine.</p>
+                    <p data-lang-en="Training programs for medical and non-medical personnel based on 3D models, VR (virtual reality) simulations and practical scenarios – from basic skills to specialized procedures." data-lang-sr="Programi obuka za medicinsko i nemedicinsko osoblje zasnovani na 3D modelima, VR (virtualna realnost) simulacijama i praktičnim scenarijima – od osnovnih veština do specijalističkih procedura.">Training programs for medical and non-medical personnel based on 3D models, VR (virtual reality) simulations and practical scenarios – from basic skills to specialized procedures.</p>
                 </div>
                 
-                <div class="subcategory">
-                    <h4>First Aid Programme for Sudden Cardiac Arrest</h4>
-                    <p>Development and implementation of a comprehensive training programme for public services (healthcare, police, fire services, schools, and public institutions) with a focus on internationally licensed programmes (e.g., a multi-day course based on the Swiss model) delivered by qualified institute physicians. The programme aims to build capacity and save lives through timely and professional response in emergency situations.</p>
+                <div class="education-programs">
+                    <div class="subcategory">
+                        <h4 data-lang-en="First Aid Programme for Sudden Cardiac Arrest" data-lang-sr="Program prve pomoći kod iznenadnog srčanog zastoja">First Aid Programme for Sudden Cardiac Arrest</h4>
+                        <p data-lang-en="Training for public services and institutions (healthcare, schools, police, firefighters...), with the aim of strengthening capacities and increasing the chance of survival in emergency situations." data-lang-sr="Obuke za javne službe i institucije (zdravstvo, škole, policija, vatrogasci...), sa ciljem jačanja kapaciteta i povećanja šanse preživljavanja u hitnim situacijama.">Training for public services and institutions (healthcare, schools, police, firefighters...), with the aim of strengthening capacities and increasing the chance of survival in emergency situations.</p>
+                    </div>
+
+                    <div class="subcategory">
+                        <h4 data-lang-en="Medical Nurse-Technician Education Program using VR Glasses" data-lang-sr="Program edukacije medicinskih sestara-tehničara uz korišćenje VR naočara">Medical Nurse-Technician Education Program using VR Glasses</h4>
+                        <p data-lang-en="Innovative training program using virtual reality technology for practical training of medical staff in realistic simulations." data-lang-sr="Inovativni program obuke koji koristi tehnologiju virtuelne realnosti za praktičnu obuku medicinskog osoblja u realističnim simulacijama.">Innovative training program using virtual reality technology for practical training of medical staff in realistic simulations.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -342,255 +329,250 @@
     </section>
     -->
 
-    <!-- Our Projects Section with Tabs -->
+    <!-- Our Projects Section -->
     <section id="our-projects" class="our-projects">
         <div class="container">
-            <h2>Our Projects</h2>
-            <p class="section-subtitle">Innovative healthcare solutions and research initiatives</p>
+            <h2 data-lang-en="Our Projects" data-lang-sr="Naši projekti">Our Projects</h2>
+            <p class="section-subtitle" data-lang-en="Innovative healthcare solutions and research initiatives" data-lang-sr="Inovativna zdravstvena rešenja i istraživačke inicijative">Innovative healthcare solutions and research initiatives</p>
             
-            <!-- Project Tabs -->
-            <div class="project-tabs">
-                <button class="tab-button active" data-tab="project1">3D CARE Project</button>
-                <button class="tab-button" data-tab="project2">Engineering Projects</button>
-                <button class="tab-button" data-tab="project3">Project 3</button>
-            </div>
-            
-            <!-- Tab Content -->
-            <div class="tab-content-container">
-                <div class="tab-content active" id="project1">
-                    <h3>3D CARE Project</h3>
-                    <p class="project-intro">Advanced 3D medical modeling and personalized healthcare solutions using cutting-edge technology.</p>
-                    
-                    <!-- Secondary Tabs for Individual Projects -->
-                    <div class="secondary-tabs">
-                        <button class="secondary-tab-button active" data-secondary-tab="spid">SPID</button>
-                        <button class="secondary-tab-button" data-secondary-tab="debac">DEBAC</button>
-                        <button class="secondary-tab-button" data-secondary-tab="suction">Suction Rongeur</button>
-                        <button class="secondary-tab-button" data-secondary-tab="tavrex">TAVReX</button>
-                        <button class="secondary-tab-button" data-secondary-tab="3dcare">3D CARE</button>
-                        <button class="secondary-tab-button" data-secondary-tab="uvcabinet">UV CABINET</button>
-                    </div>
-                    
-                    <!-- Secondary Tab Contents -->
-                    <div class="secondary-tab-content-container">
-                        <!-- SPID Project -->
-                        <div class="secondary-tab-content active" id="spid">
-                            <h4>SPID Project</h4>
-                            <div class="project-details-grid">
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-user-tie"></i> Principal Investigator</h5>
-                                    <p>Ivan Stojanovic</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-building"></i> Organization</h5>
-                                    <p>Kardiohirurgija</p>
-                                </div>
-                            </div>
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- SPID Project Card -->
+                <div class="project-card">
+                    <h3>SPID</h3>
+                    <div class="project-details-grid">
+                        <div class="detail-item">
+                            <h5 data-lang-en="Principal Investigator" data-lang-sr="Glavni istraživač"><i class="fas fa-user-tie"></i> Principal Investigator</h5>
+                            <p>Ivan Stojanovic</p>
                         </div>
-                        
-                        <!-- DEBAC Project -->
-                        <div class="secondary-tab-content" id="debac">
-                            <h4>DEBAC Project</h4>
-                            <div class="project-details-grid">
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-user-tie"></i> Principal Investigator</h5>
-                                    <p>Slobodan Tanaskovic</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-users"></i> Team Members</h5>
-                                    <ul>
-                                        <li>Miljenko Subašić</li>
-                                        <li>Bojan Bozic</li>
-                                    </ul>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-building"></i> Organization</h5>
-                                    <p>Vaskularna hirurgija</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-calendar-alt"></i> Project Timeline</h5>
-                                    <p><strong>Start Date:</strong> 01.09.2025</p>
-                                    <p><strong>Duration:</strong> 6 months</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-flask"></i> Research Phase</h5>
-                                    <p><strong>Start:</strong> TRL 4</p>
-                                    <p><strong>End Goal:</strong> TRL 6</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-hand-holding-usd"></i> Funding Source</h5>
-                                    <p>SAIGE</p>
-                                    <p>Cross the gap</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Suction Rongeur Project -->
-                        <div class="secondary-tab-content" id="suction">
-                            <h4>Suction Rongeur Project</h4>
-                            <div class="project-details-grid">
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-user-tie"></i> Principal Investigator</h5>
-                                    <p>Slobodan Micovic</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-users"></i> Team Members</h5>
-                                    <ul>
-                                        <li>Miljenko Subašić</li>
-                                        <li>Bojan Bozic</li>
-                                    </ul>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-building"></i> Organization</h5>
-                                    <p>Kardiohirurgija</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-calendar-alt"></i> Project Timeline</h5>
-                                    <p><strong>Start Date:</strong> 01.09.2025</p>
-                                    <p><strong>Duration:</strong> 6 months</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-flask"></i> Research Phase</h5>
-                                    <p><strong>Start:</strong> TRL 4</p>
-                                    <p><strong>End Goal:</strong> TRL 6</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-hand-holding-usd"></i> Funding Source</h5>
-                                    <p>SAIGE</p>
-                                    <p>Cross the gap</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- TAVReX Project -->
-                        <div class="secondary-tab-content" id="tavrex">
-                            <h4>TAVReX Project</h4>
-                            <div class="project-details-grid">
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-user-tie"></i> Principal Investigator</h5>
-                                    <p>Slobodan Micovic</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-users"></i> Team Members</h5>
-                                    <ul>
-                                        <li>Miljenko Subašić</li>
-                                        <li>Bojan Bozic</li>
-                                    </ul>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-building"></i> Organization</h5>
-                                    <p>Kardiohirurgija</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-calendar-alt"></i> Project Timeline</h5>
-                                    <p><strong>Start Date:</strong> 01.09.2025 (Red text in original)</p>
-                                    <p><strong>Duration:</strong> 12 months</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-flask"></i> Research Phase</h5>
-                                    <p><strong>Start:</strong> TRL 4 (Red text)</p>
-                                    <p><strong>End Goal:</strong> TRL 6 (Red text)</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-hand-holding-usd"></i> Funding Source</h5>
-                                    <p>SAIGE</p>
-                                    <p>UTRL</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 3D CARE Project -->
-                        <div class="secondary-tab-content" id="3dcare">
-                            <h4>3D CARE Modeling Project</h4>
-                            <div class="project-details-grid">
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-user-tie"></i> Principal Investigator</h5>
-                                    <p>Maša Petrović</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-users"></i> Team Members</h5>
-                                    <ul>
-                                        <li>Miljenko Subašić</li>
-                                        <li>Dragiša Radovanović</li>
-                                        <li>Aleksandra Vukotić</li>
-                                        <li>Nemanja Žikić</li>
-                                        <li>Nenad Petković</li>
-                                        <li>3D Republika</li>
-                                    </ul>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-building"></i> Organization</h5>
-                                    <p>3D Lab/Nauka</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-calendar-alt"></i> Project Timeline</h5>
-                                    <p><strong>Start Date:</strong> 05.08.2025</p>
-                                    <p><strong>Duration:</strong> 12 months</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-flask"></i> Research Phase</h5>
-                                    <p><strong>Start:</strong> TRL 4</p>
-                                    <p><strong>End Goal:</strong> TRL 7</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-hand-holding-usd"></i> Funding Source</h5>
-                                    <p>SAIGE</p>
-                                    <p>UTRL</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- UV CABINET Project -->
-                        <div class="secondary-tab-content" id="uvcabinet">
-                            <h4>UV CABINET Project</h4>
-                            <div class="project-details-grid">
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-user-tie"></i> Principal Investigator</h5>
-                                    <p>Maša Petrović</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-users"></i> Team Members</h5>
-                                    <ul>
-                                        <li>Zorica Vasic</li>
-                                        <li>Dalibor Aksic</li>
-                                        <li>Miljenko Subašić</li>
-                                        <li>Bojan Bozic</li>
-                                        <li>Stefan Graovac</li>
-                                        <li>Nikola Ruzic</li>
-                                    </ul>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-building"></i> Organization</h5>
-                                    <p>3D Lab/Nauka</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-calendar-alt"></i> Project Timeline</h5>
-                                    <p><strong>Start Date:</strong> 01.2025</p>
-                                    <p><strong>Duration:</strong> 12 months</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-flask"></i> Research Phase</h5>
-                                    <p><strong>Start:</strong> TRL 4</p>
-                                    <p><strong>End Goal:</strong> TRL 7</p>
-                                </div>
-                                <div class="detail-item">
-                                    <h5><i class="fas fa-hand-holding-usd"></i> Funding Source</h5>
-                                    <p>Republika Srbija</p>
-                                    <p>Fond za Inovacije</p>
-                                </div>
-                            </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Organization" data-lang-sr="Organizacija"><i class="fas fa-building"></i> Organization</h5>
+                            <p data-lang-en="Cardiac Surgery" data-lang-sr="Kardiohirurgija">Cardiac Surgery</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="tab-content" id="project2">
-                    <h3>Project 2 Title</h3>
-                    <p>Description of project 2. Add details about the project here.</p>
+
+                <!-- DEBAC Project Card -->
+                <div class="project-card">
+                    <h3>DEBAC</h3>
+                    <div class="project-details-grid">
+                        <div class="detail-item">
+                            <h5 data-lang-en="Principal Investigator" data-lang-sr="Glavni istraživač"><i class="fas fa-user-tie"></i> Principal Investigator</h5>
+                            <p>Slobodan Tanaskovic</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Team Members" data-lang-sr="Članovi tima"><i class="fas fa-users"></i> Team Members</h5>
+                            <ul>
+                                <li>Miljenko Subašić</li>
+                                <li>Bojan Bozic</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Organization" data-lang-sr="Organizacija"><i class="fas fa-building"></i> Organization</h5>
+                            <p data-lang-en="Vascular Surgery" data-lang-sr="Vaskularna hirurgija">Vascular Surgery</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Project Timeline" data-lang-sr="Vremenski okvir"><i class="fas fa-calendar-alt"></i> Project Timeline</h5>
+                            <p><strong data-lang-en="Start Date:" data-lang-sr="Početak:">Start Date:</strong> 01.09.2025</p>
+                            <p><strong data-lang-en="Duration:" data-lang-sr="Trajanje:">Duration:</strong> <span data-lang-en="6 months" data-lang-sr="6 meseci">6 months</span></p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Research Phase" data-lang-sr="Faza istraživanja"><i class="fas fa-flask"></i> Research Phase</h5>
+                            <p><strong data-lang-en="Start:" data-lang-sr="Početak:">Start:</strong> TRL 4</p>
+                            <p><strong data-lang-en="End Goal:" data-lang-sr="Cilj:">End Goal:</strong> TRL 6</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Funding Source" data-lang-sr="Izvor finansiranja"><i class="fas fa-hand-holding-usd"></i> Funding Source</h5>
+                            <p>SAIGE</p>
+                            <p>Cross the gap</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="tab-content" id="project3">
-                    <h3>Project 3 Title</h3>
-                    <p>Description of project 3. Add details about the project here.</p>
+
+                <!-- Suction Rongeur Project Card -->
+                <div class="project-card">
+                    <h3>Suction Rongeur</h3>
+                    <div class="project-details-grid">
+                        <div class="detail-item">
+                            <h5 data-lang-en="Principal Investigator" data-lang-sr="Glavni istraživač"><i class="fas fa-user-tie"></i> Principal Investigator</h5>
+                            <p>Slobodan Micovic</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Team Members" data-lang-sr="Članovi tima"><i class="fas fa-users"></i> Team Members</h5>
+                            <ul>
+                                <li>Miljenko Subašić</li>
+                                <li>Bojan Bozic</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Organization" data-lang-sr="Organizacija"><i class="fas fa-building"></i> Organization</h5>
+                            <p data-lang-en="Cardiac Surgery" data-lang-sr="Kardiohirurgija">Cardiac Surgery</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Project Timeline" data-lang-sr="Vremenski okvir"><i class="fas fa-calendar-alt"></i> Project Timeline</h5>
+                            <p><strong data-lang-en="Start Date:" data-lang-sr="Početak:">Start Date:</strong> 01.09.2025</p>
+                            <p><strong data-lang-en="Duration:" data-lang-sr="Trajanje:">Duration:</strong> <span data-lang-en="6 months" data-lang-sr="6 meseci">6 months</span></p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Research Phase" data-lang-sr="Faza istraživanja"><i class="fas fa-flask"></i> Research Phase</h5>
+                            <p><strong data-lang-en="Start:" data-lang-sr="Početak:">Start:</strong> TRL 4</p>
+                            <p><strong data-lang-en="End Goal:" data-lang-sr="Cilj:">End Goal:</strong> TRL 6</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Funding Source" data-lang-sr="Izvor finansiranja"><i class="fas fa-hand-holding-usd"></i> Funding Source</h5>
+                            <p>SAIGE</p>
+                            <p>Cross the gap</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAVReX Project Card -->
+                <div class="project-card">
+                    <h3>TAVReX</h3>
+                    <div class="project-details-grid">
+                        <div class="detail-item">
+                            <h5 data-lang-en="Principal Investigator" data-lang-sr="Glavni istraživač"><i class="fas fa-user-tie"></i> Principal Investigator</h5>
+                            <p>Slobodan Micovic</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Team Members" data-lang-sr="Članovi tima"><i class="fas fa-users"></i> Team Members</h5>
+                            <ul>
+                                <li>Miljenko Subašić</li>
+                                <li>Bojan Bozic</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Organization" data-lang-sr="Organizacija"><i class="fas fa-building"></i> Organization</h5>
+                            <p data-lang-en="Cardiac Surgery" data-lang-sr="Kardiohirurgija">Cardiac Surgery</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Project Timeline" data-lang-sr="Vremenski okvir"><i class="fas fa-calendar-alt"></i> Project Timeline</h5>
+                            <p><strong data-lang-en="Start Date:" data-lang-sr="Početak:">Start Date:</strong> 01.09.2025</p>
+                            <p><strong data-lang-en="Duration:" data-lang-sr="Trajanje:">Duration:</strong> <span data-lang-en="12 months" data-lang-sr="12 meseci">12 months</span></p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Research Phase" data-lang-sr="Faza istraživanja"><i class="fas fa-flask"></i> Research Phase</h5>
+                            <p><strong data-lang-en="Start:" data-lang-sr="Početak:">Start:</strong> TRL 4</p>
+                            <p><strong data-lang-en="End Goal:" data-lang-sr="Cilj:">End Goal:</strong> TRL 6</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Funding Source" data-lang-sr="Izvor finansiranja"><i class="fas fa-hand-holding-usd"></i> Funding Source</h5>
+                            <p>SAIGE</p>
+                            <p>UTRL</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3D CARE Project Card -->
+                <div class="project-card">
+                    <h3 data-lang-en="3D CARE Modeling Project" data-lang-sr="3D CARE Projekat modelovanja">3D CARE Modeling Project</h3>
+                    <div class="project-details-grid">
+                        <div class="detail-item">
+                            <h5 data-lang-en="Principal Investigator" data-lang-sr="Glavni istraživač"><i class="fas fa-user-tie"></i> Principal Investigator</h5>
+                            <p>Maša Petrović</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Team Members" data-lang-sr="Članovi tima"><i class="fas fa-users"></i> Team Members</h5>
+                            <ul>
+                                <li>Miljenko Subašić</li>
+                                <li>Dragiša Radovanović</li>
+                                <li>Aleksandra Vukotić</li>
+                                <li>Nemanja Žikić</li>
+                                <li>Nenad Petković</li>
+                                <li>3D Republika</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Organization" data-lang-sr="Organizacija"><i class="fas fa-building"></i> Organization</h5>
+                            <p>3D Lab/Nauka</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Project Timeline" data-lang-sr="Vremenski okvir"><i class="fas fa-calendar-alt"></i> Project Timeline</h5>
+                            <p><strong data-lang-en="Start Date:" data-lang-sr="Početak:">Start Date:</strong> 05.08.2025</p>
+                            <p><strong data-lang-en="Duration:" data-lang-sr="Trajanje:">Duration:</strong> <span data-lang-en="12 months" data-lang-sr="12 meseci">12 months</span></p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Research Phase" data-lang-sr="Faza istraživanja"><i class="fas fa-flask"></i> Research Phase</h5>
+                            <p><strong data-lang-en="Start:" data-lang-sr="Početak:">Start:</strong> TRL 4</p>
+                            <p><strong data-lang-en="End Goal:" data-lang-sr="Cilj:">End Goal:</strong> TRL 7</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Funding Source" data-lang-sr="Izvor finansiranja"><i class="fas fa-hand-holding-usd"></i> Funding Source</h5>
+                            <p>SAIGE</p>
+                            <p>UTRL</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UV CABINET Project Card -->
+                <div class="project-card">
+                    <h3>UV CABINET</h3>
+                    <div class="project-details-grid">
+                        <div class="detail-item">
+                            <h5 data-lang-en="Principal Investigator" data-lang-sr="Glavni istraživač"><i class="fas fa-user-tie"></i> Principal Investigator</h5>
+                            <p>Maša Petrović</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Team Members" data-lang-sr="Članovi tima"><i class="fas fa-users"></i> Team Members</h5>
+                            <ul>
+                                <li>Zorica Vasic</li>
+                                <li>Dalibor Aksic</li>
+                                <li>Miljenko Subašić</li>
+                                <li>Bojan Bozic</li>
+                                <li>Stefan Graovac</li>
+                                <li>Nikola Ruzic</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Organization" data-lang-sr="Organizacija"><i class="fas fa-building"></i> Organization</h5>
+                            <p>3D Lab/Nauka</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Project Timeline" data-lang-sr="Vremenski okvir"><i class="fas fa-calendar-alt"></i> Project Timeline</h5>
+                            <p><strong data-lang-en="Start Date:" data-lang-sr="Početak:">Start Date:</strong> 01.2025</p>
+                            <p><strong data-lang-en="Duration:" data-lang-sr="Trajanje:">Duration:</strong> <span data-lang-en="12 months" data-lang-sr="12 meseci">12 months</span></p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Research Phase" data-lang-sr="Faza istraživanja"><i class="fas fa-flask"></i> Research Phase</h5>
+                            <p><strong data-lang-en="Start:" data-lang-sr="Početak:">Start:</strong> TRL 4</p>
+                            <p><strong data-lang-en="End Goal:" data-lang-sr="Cilj:">End Goal:</strong> TRL 7</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Funding Source" data-lang-sr="Izvor finansiranja"><i class="fas fa-hand-holding-usd"></i> Funding Source</h5>
+                            <p data-lang-en="Republic of Serbia" data-lang-sr="Republika Srbija">Republic of Serbia</p>
+                            <p data-lang-en="Innovation Fund" data-lang-sr="Fond za Inovacije">Innovation Fund</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Machine Learning Project Card -->
+                <div class="project-card">
+                    <h3 data-lang-en="Machine Learning-Based Decision Support System for Preoperative Coronary Angiography in Vascular Surgery Patients" data-lang-sr="Sistem za podršku odlučivanju zasnovan na mašinskom učenju za predoperativnu koronarnu angiografiju kod pacijenata vaskularnog hirurga">Machine Learning-Based Decision Support System for Preoperative Coronary Angiography in Vascular Surgery Patients</h3>
+                    <div class="project-details-grid">
+                        <div class="detail-item">
+                            <h5 data-lang-en="Principal Investigator" data-lang-sr="Glavni istraživač"><i class="fas fa-user-tie"></i> Principal Investigator</h5>
+                            <p>TBD</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Organization" data-lang-sr="Organizacija"><i class="fas fa-building"></i> Organization</h5>
+                            <p data-lang-en="Vascular Surgery" data-lang-sr="Vaskularna hirurgija">Vascular Surgery</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Project Timeline" data-lang-sr="Vremenski okvir"><i class="fas fa-calendar-alt"></i> Project Timeline</h5>
+                            <p><strong data-lang-en="Start Date:" data-lang-sr="Početak:">Start Date:</strong> TBD</p>
+                            <p><strong data-lang-en="Duration:" data-lang-sr="Trajanje:">Duration:</strong> <span data-lang-en="12 months" data-lang-sr="12 meseci">12 months</span></p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Research Phase" data-lang-sr="Faza istraživanja"><i class="fas fa-flask"></i> Research Phase</h5>
+                            <p><strong data-lang-en="Start:" data-lang-sr="Početak:">Start:</strong> TRL 4</p>
+                            <p><strong data-lang-en="End Goal:" data-lang-sr="Cilj:">End Goal:</strong> TRL 7</p>
+                        </div>
+                        <div class="detail-item">
+                            <h5 data-lang-en="Funding Source" data-lang-sr="Izvor finansiranja"><i class="fas fa-hand-holding-usd"></i> Funding Source</h5>
+                            <p data-lang-en="Republic of Serbia" data-lang-sr="Republika Srbija">Republic of Serbia</p>
+                            <p data-lang-en="Innovation Fund" data-lang-sr="Fond za Inovacije">Innovation Fund</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -599,39 +581,39 @@
     <!-- Research & Development Section -->
     <section id="research-development" class="research-development">
         <div class="container">
-            <h2>Research & Development</h2>
-            <p class="section-subtitle">Conducts research projects, develops prototypes, and tests new technologies</p>
+            <h2 data-lang-en="Research & Development" data-lang-sr="Istraživanje i razvoj">Research & Development</h2>
+            <p class="section-subtitle" data-lang-en="Conducts research projects, develops prototypes, and tests new technologies" data-lang-sr="Sprovodi istraživačke projekte, razvija prototipove i testira nove tehnologije">Conducts research projects, develops prototypes, and tests new technologies</p>
             
             <!-- Category 1: Smart Health Village -->
             <div class="research-category">
-                <h3 class="category-title">Smart Health Village</h3>
+                <h3 class="category-title" data-lang-en="Smart Health Village" data-lang-sr="Smart Health Village">Smart Health Village</h3>
                 <div class="research-description">
-                    <p>The Smart Health Village concept represents a modern approach to strengthening healthcare capacities, with a focus on innovative rehabilitation, post-hospital care, and preventive health—primarily for cardiovascular patients. Building on European Union principles for developing smart and sustainable areas, this model integrates improved healthcare services, digital technologies, environmental sustainability, and social inclusion into a coherent framework aimed at enhancing the well-being of our population.</p>
-                    <p style="margin-top: 1.5rem;"><strong>Rather than relying solely on traditional rehabilitation services, the Smart Health Village creates new opportunities through:</strong></p>
+                    <p data-lang-en="The Smart Health Village concept represents a modern approach to strengthening healthcare capacities, with a focus on innovative rehabilitation, post-hospital care, and preventive health—primarily for cardiovascular patients. Building on European Union principles for developing smart and sustainable areas, this model integrates improved healthcare services, digital technologies, environmental sustainability, and social inclusion into a coherent framework aimed at enhancing the well-being of our population." data-lang-sr="Koncept 'Smart Health Village' predstavlja savremeni model jačanja zdravstvenih kapaciteta, sa fokusom na inovativnu rehabilitaciju, posthospitalnu negu i prevenciju – primarno za kardiovaskularne pacijente. Integracijom digitalnih tehnologija, održivosti i edukacije, cilj je smanjenje ponovnih hospitalizacija i rasterećenje zdravstvenog sistema.">The Smart Health Village concept represents a modern approach to strengthening healthcare capacities, with a focus on innovative rehabilitation, post-hospital care, and preventive health—primarily for cardiovascular patients. Building on European Union principles for developing smart and sustainable areas, this model integrates improved healthcare services, digital technologies, environmental sustainability, and social inclusion into a coherent framework aimed at enhancing the well-being of our population.</p>
+                    <p style="margin-top: 1.5rem;"><strong data-lang-en="Rather than relying solely on traditional rehabilitation services, the Smart Health Village creates new opportunities through:" data-lang-sr="Umesto oslanjanja samo na tradicionalne rehabilitacione usluge, Smart Health Village kreira nove mogućnosti kroz:">Rather than relying solely on traditional rehabilitation services, the Smart Health Village creates new opportunities through:</strong></p>
                     <ul style="margin-top: 1rem; color: var(--text-light);">
-                        <li>Innovative models of cardiovascular rehabilitation</li>
-                        <li>Community-based post-hospital care</li>
-                        <li>Primary and secondary prevention</li>
-                        <li>Health monitoring through advanced digital technologies (including the use of artificial intelligence)</li>
-                        <li>Education for patients and the wider community</li>
+                        <li data-lang-en="Innovative models of cardiovascular rehabilitation" data-lang-sr="Inovativne modele kardiovaskularne rehabilitacije">Innovative models of cardiovascular rehabilitation</li>
+                        <li data-lang-en="Community-based post-hospital care" data-lang-sr="Posthospitalnu negu zasnovanu u zajednici">Community-based post-hospital care</li>
+                        <li data-lang-en="Primary and secondary prevention" data-lang-sr="Primarnu i sekundarnu prevenciju">Primary and secondary prevention</li>
+                        <li data-lang-en="Health monitoring through advanced digital technologies (including the use of artificial intelligence)" data-lang-sr="Praćenje zdravlja kroz napredne digitalne tehnologije (uključujući upotrebu veštačke inteligencije)">Health monitoring through advanced digital technologies (including the use of artificial intelligence)</li>
+                        <li data-lang-en="Education for patients and the wider community" data-lang-sr="Edukaciju pacijenata i šire zajednice">Education for patients and the wider community</li>
                     </ul>
-                    <p style="margin-top: 1.5rem;">This model contributes to a significant reduction of pressure on the healthcare system, decreases the need for re-hospitalisation, improves patient recovery in a setting close to home, and at the same time supports the development of Serbia's health policy.</p>
+                    <p style="margin-top: 1.5rem;" data-lang-en="This model contributes to a significant reduction of pressure on the healthcare system, decreases the need for re-hospitalisation, improves patient recovery in a setting close to home, and at the same time supports the development of Serbia's health policy." data-lang-sr="Ovaj model doprinosi značajnom smanjenju pritiska na zdravstveni sistem, smanjuje potrebu za ponovnim hospitalizacijama, poboljšava oporavak pacijenata u okruženju bliskom domu, i istovremeno podržava razvoj zdravstvene politike Srbije.">This model contributes to a significant reduction of pressure on the healthcare system, decreases the need for re-hospitalisation, improves patient recovery in a setting close to home, and at the same time supports the development of Serbia's health policy.</p>
                 </div>
             </div>
 
             <!-- Category 2: Medical Waste Management -->
             <div class="research-category">
-                <h3 class="category-title">Medical Waste Management</h3>
+                <h3 class="category-title" data-lang-en="Medical Waste Management" data-lang-sr="Upravljanje medicinskim otpadom">Medical Waste Management</h3>
                 <div class="research-description">
-                    <p>Development and implementation of innovative, safe, and environmentally friendly solutions for the collection, treatment, and disposal of medical waste, with a particular focus on hazardous medical waste from healthcare facilities and rehabilitation centres, in line with the highest European and national standards.</p>
+                    <p data-lang-en="Development and implementation of innovative, safe, and environmentally friendly solutions for the collection, treatment, and disposal of medical waste, with a particular focus on hazardous medical waste from healthcare facilities and rehabilitation centres, in line with the highest European and national standards." data-lang-sr="Razvoj i primena bezbednih, inovativnih i ekološki prihvatljivih rešenja za prikupljanje, tretman i odlaganje medicinskog otpada, uz jačanje prakse u ustanovama i uvođenje digitalnog praćenja i izveštavanja.">Development and implementation of innovative, safe, and environmentally friendly solutions for the collection, treatment, and disposal of medical waste, with a particular focus on hazardous medical waste from healthcare facilities and rehabilitation centres, in line with the highest European and national standards.</p>
                 </div>
             </div>
 
             <!-- Category 3: National and International Innovation -->
             <div class="research-category">
-                <h3 class="category-title">National and International Innovation and Research Projects</h3>
+                <h3 class="category-title" data-lang-en="National and International Innovation and Research Projects" data-lang-sr="Nacionalni i međunarodni projekti">National and International Innovation and Research Projects</h3>
                 <div class="research-description">
-                    <p>As a spin-off company founded by the Institute for Cardiovascular Diseases "Dedinje" (IKVBD), SMARTHEALTH has its own partnership network with hospitals, the pharmaceutical industry, and biomedical companies, aimed at joint work on innovation and research projects in the field of cardiovascular medicine.</p>
+                    <p data-lang-en="As a spin-off company founded by the Institute for Cardiovascular Diseases &quot;Dedinje&quot; (IKVBD), SMARTHEALTH has its own partnership network with hospitals, the pharmaceutical industry, and biomedical companies, aimed at joint work on innovation and research projects in the field of cardiovascular medicine." data-lang-sr="SMARTHEALT razvija mrežu saradnje sa bolnicama, industrijom i istraživačkim partnerima – sa ciljem zajedničkog rada na istraživačko-razvojnim projektima, transferu tehnologije i jačanju kapaciteta.">As a spin-off company founded by the Institute for Cardiovascular Diseases "Dedinje" (IKVBD), SMARTHEALTH has its own partnership network with hospitals, the pharmaceutical industry, and biomedical companies, aimed at joint work on innovation and research projects in the field of cardiovascular medicine.</p>
                 </div>
             </div>
         </div>
@@ -640,23 +622,23 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact Us</h2>
-            <p class="section-subtitle">Learn more about our products and services</p>
+            <h2 data-lang-en="Contact Us" data-lang-sr="Kontaktirajte nas">Contact Us</h2>
+            <p class="section-subtitle" data-lang-en="Learn more about our products and services" data-lang-sr="Saznajte više o našim proizvodima i uslugama">Learn more about our products and services</p>
             
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Location</h4>
-                            <p>Institute for Cardiovascular Diseases "Dedinje"<br>Belgrade, Serbia</p>
+                            <h4 data-lang-en="Location" data-lang-sr="Lokacija">Location</h4>
+                            <p data-lang-en="Institute for Cardiovascular Diseases &quot;Dedinje&quot;<br>Belgrade, Serbia" data-lang-sr="Institut za kardiovaskularne bolesti &quot;Dedinje&quot;<br>Beograd, Srbija">Institute for Cardiovascular Diseases "Dedinje"<br>Belgrade, Serbia</p>
                         </div>
                     </div>
 
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
                         <div>
-                            <h4>Phone</h4>
+                            <h4 data-lang-en="Phone" data-lang-sr="Telefon">Phone</h4>
                             <p>+381 (11) XXXX-XXXX</p>
                         </div>
                     </div>
@@ -664,7 +646,7 @@
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <h4>Email</h4>
+                            <h4 data-lang-en="Email" data-lang-sr="Email">Email</h4>
                             <p>info@smarthealth.rs</p>
                         </div>
                     </div>
@@ -672,18 +654,18 @@
 
                 <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" id="nameInput" data-lang-en-placeholder="Your Name" data-lang-sr-placeholder="Vaše ime" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" id="emailInput" data-lang-en-placeholder="Your Email" data-lang-sr-placeholder="Vaš email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject">
+                        <input type="text" id="subjectInput" data-lang-en-placeholder="Subject" data-lang-sr-placeholder="Predmet" placeholder="Subject">
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Message" rows="5" required></textarea>
+                        <textarea id="messageInput" data-lang-en-placeholder="Message" data-lang-sr-placeholder="Poruka" placeholder="Message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" data-lang-en="Send Message" data-lang-sr="Pošalji poruku">Send Message</button>
                 </form>
             </div>
         </div>
@@ -692,8 +674,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 SMART HEALTH DOO. All rights reserved.</p>
-            <p>Innovative 3D medical solutions | Institute for Cardiovascular Diseases "Dedinje"</p>
+            <p data-lang-en="&copy; 2025 SMART HEALTH DOO. All rights reserved." data-lang-sr="&copy; 2025 SMART HEALTH DOO. Sva prava zadržana.">&copy; 2025 SMART HEALTH DOO. All rights reserved.</p>
+            <p data-lang-en="Innovative 3D medical solutions | Institute for Cardiovascular Diseases &quot;Dedinje&quot;" data-lang-sr="Inovativna 3D medicinska rešenja | Institut za kardiovaskularne bolesti &quot;Dedinje&quot;">Innovative 3D medical solutions | Institute for Cardiovascular Diseases "Dedinje"</p>
         </div>
     </footer>
 

@@ -368,46 +368,83 @@ scrollToTopBtn.addEventListener("click", function () {
   });
 });
 
-// Project Tabs Functionality
-document.addEventListener("DOMContentLoaded", function () {
-  const tabButtons = document.querySelectorAll(".tab-button");
-  const tabContents = document.querySelectorAll(".tab-content");
+// Language Toggle Functionality
+let currentLang = localStorage.getItem("language") || "en";
 
-  tabButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const targetTab = this.getAttribute("data-tab");
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem("language", lang);
 
-      // Remove active class from all buttons and contents
-      tabButtons.forEach((btn) => btn.classList.remove("active"));
-      tabContents.forEach((content) => content.classList.remove("active"));
+  // Update HTML lang attribute
+  document.documentElement.lang = lang;
 
-      // Add active class to clicked button and corresponding content
-      this.classList.add("active");
-      document.getElementById(targetTab).classList.add("active");
-    });
+  // Update all elements with data-lang attributes
+  document.querySelectorAll("[data-lang-en]").forEach((element) => {
+    const text = element.getAttribute(`data-lang-${lang}`);
+    if (text) {
+      // Check if element is title
+      if (element.tagName === "TITLE") {
+        document.title = text;
+      }
+      // Check if element is a button, heading, or simple paragraph (direct text node)
+      else if (
+        element.tagName === "BUTTON" ||
+        element.tagName === "H2" ||
+        element.tagName === "H3" ||
+        element.tagName === "H4" ||
+        element.tagName === "H5" ||
+        element.tagName === "A" ||
+        element.tagName === "LI" ||
+        element.classList.contains("section-subtitle") ||
+        element.classList.contains("category-title") ||
+        element.classList.contains("product-desc") ||
+        (element.tagName === "P" && !element.querySelector("strong, span"))
+      ) {
+        element.textContent = text;
+      }
+      // For paragraphs with nested elements (like strong tags), preserve structure
+      else if (element.tagName === "P" || element.tagName === "SPAN") {
+        element.innerHTML = element.innerHTML.replace(
+          element.childNodes[element.childNodes.length - 1].textContent,
+          text
+        );
+        // If it's just text content without nested elements, replace directly
+        if (
+          element.childNodes.length === 1 &&
+          element.childNodes[0].nodeType === Node.TEXT_NODE
+        ) {
+          element.textContent = text;
+        }
+      }
+    }
   });
 
-  // Secondary Tabs Functionality
-  const secondaryTabButtons = document.querySelectorAll(
-    ".secondary-tab-button"
-  );
-  const secondaryTabContents = document.querySelectorAll(
-    ".secondary-tab-content"
-  );
-
-  secondaryTabButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const targetTab = this.getAttribute("data-secondary-tab");
-
-      // Remove active class from all secondary buttons and contents
-      secondaryTabButtons.forEach((btn) => btn.classList.remove("active"));
-      secondaryTabContents.forEach((content) =>
-        content.classList.remove("active")
-      );
-
-      // Add active class to clicked button and corresponding content
-      this.classList.add("active");
-      document.getElementById(targetTab).classList.add("active");
-    });
+  // Update placeholder attributes for input fields
+  document.querySelectorAll("[data-lang-en-placeholder]").forEach((element) => {
+    const placeholder = element.getAttribute(`data-lang-${lang}-placeholder`);
+    if (placeholder) {
+      element.placeholder = placeholder;
+    }
   });
+
+  // Update language toggle button
+  const langToggle = document.getElementById("langToggle");
+  if (langToggle) {
+    const langText = langToggle.querySelector(".lang-text");
+    langText.textContent = lang === "en" ? "SR" : "EN";
+  }
+}
+
+// Initialize language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  setLanguage(currentLang);
+
+  // Add event listener to language toggle button
+  const langToggle = document.getElementById("langToggle");
+  if (langToggle) {
+    langToggle.addEventListener("click", () => {
+      const newLang = currentLang === "en" ? "sr" : "en";
+      setLanguage(newLang);
+    });
+  }
 });
