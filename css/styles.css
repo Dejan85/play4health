@@ -1827,11 +1827,21 @@ section h2 {
         right: 1.5rem;
         font-size: 1.25rem;
     }
+
+    .modal {
+        overflow-y: auto;
+    }
     
     .modal-content {
-        margin: 10% auto;
-        padding: 1.5rem;
-        width: 95%;
+        margin: 0;
+        padding: 1.25rem;
+        width: 100%;
+        max-width: none;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     #modalBody h2 {
