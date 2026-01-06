@@ -18,192 +18,162 @@ function showSlide(index) {
 
   // Remove active class from all dots
   dots.forEach((dot) => dot.classList.remove("active"));
-
-  // Add active class to new slide and dot
-  slides[index].classList.add("active");
-  dots[index].classList.add("active");
-
-  currentSlideIndex = index;
 }
 
-function nextSlide() {
-  let nextIndex = (currentSlideIndex + 1) % slides.length;
-  showSlide(nextIndex);
-}
+// Project Details Modal
+const modal = document.getElementById("modal");
 
-function currentSlide(index) {
-  showSlide(index);
-}
+const titleEl = document.getElementById("modalProjectTitle");
+const rowInvestigator = document.getElementById("row-investigator");
+const rowDescription = document.getElementById("row-description");
+const rowTeam = document.getElementById("row-team");
+const rowOrg = document.getElementById("row-organization");
+const rowTimeline = document.getElementById("row-timeline");
+const rowTrl = document.getElementById("row-trl");
+const rowFunding = document.getElementById("row-funding");
 
-// Auto-rotate carousel every 5 seconds
-setInterval(nextSlide, 5000);
+const labelDescription = document.getElementById("label-description");
+const labelInvestigator = document.getElementById("label-investigator");
+const labelTeam = document.getElementById("label-team");
+const labelOrg = document.getElementById("label-organization");
+const labelTimeline = document.getElementById("label-timeline");
+const labelTrl = document.getElementById("label-trl");
+const labelFunding = document.getElementById("label-funding");
 
-// Product Details Modal
-const productDetails = {
-  1: {
-    title: "Waste Container Holders",
-    description:
-      "Specialized holders for safe storage and access to medical waste containers in hospital facilities.",
-    specs: [
-      "Capacity: 3L and 4L variants",
-      "Material: 3D printed thermoplastic",
-      "Design: Ergonomic and safety-oriented",
-      "Installation: Easy wall mounting",
-      "Application: All hospital institutions with safety standards",
-    ],
-    benefits: [
-      "Prevents spillage of infectious material",
-      "Facilitates access for medical staff",
-      "Organizes space efficiently",
-      "Reduces risk of accidents",
-      "Favorable production cost",
-    ],
-  },
-  2: {
-    title: "Wall-Mounted Glove Box Holder",
-    description:
-      "Practical wall holder designed for storage and easy access to boxes of disposable medical gloves.",
-    specs: [
-      "Type: Wall-mounted holder",
-      "Compatibility: Various box sizes",
-      "Installation: Simple mounting",
-      "Material: Durable thermoplastic",
-      "Dimensions: Adapted to standard boxes",
-    ],
-    benefits: [
-      "Better glove accessibility",
-      "Saves space in clinics",
-      "Reduces time to find items",
-      "Hygienic design",
-      "Increases work efficiency",
-    ],
-  },
-  3: {
-    title: "Medical Instrument Holder",
-    description:
-      "Ergonomically designed holder for storing medical instruments in hospital conditions.",
-    specs: [
-      "Purpose: Storage of medical instruments",
-      "Ergonomic design: Easier instrument access",
-      "Material: Durable thermoplastic",
-      "Flexibility: Adapted to different instruments",
-      "Application: Operating rooms, clinics, medical offices",
-    ],
-    benefits: [
-      "Prevents instrument damage",
-      "Makes space more organized",
-      "Faster tool access during procedure",
-      "Reduces contamination risk",
-      "Improves work safety",
-    ],
-  },
-  4: {
-    title: "Medicine Label Holder",
-    description:
-      "Innovative holder designed for storage and review of medications on carts in operating rooms.",
-    specs: [
-      "Application: Medication carts in operating rooms",
-      "Capacity: Positions for multiple bottles/ampoules",
-      "Attachment: Mounting on mobile carts",
-      "Material: Durable and light thermoplastic",
-      "Design: Allows quick review of medication sequence",
-    ],
-    benefits: [
-      "Prevents medication confusion",
-      "Reduces time to find needed medication",
-      "Improves patient safety",
-      "Makes surgical team work more efficient",
-      "Reduces risk of error",
-    ],
-  },
-  5: {
-    title: "Laptop Holder for Operating Room",
-    description:
-      "Specialized holder that enables laptop use during surgical procedures.",
-    specs: [
-      "Purpose: Access to digital information in operating room",
-      "Compatibility: Various laptop sizes",
-      "Material: Protective thermoplastic",
-      "Mounting: Flexible attachment to various surfaces",
-      "Design: Does not interfere with surgical field access",
-    ],
-    benefits: [
-      "Enables real-time access to medical records",
-      "Faster preoperative and intraoperative consultation",
-      "Improves team communication",
-      "Reduces operation time",
-      "Increases procedure precision",
-    ],
-  },
-  6: {
-    title: "VAK - Vascular Anastomosis Kit",
-    description:
-      "Revolutionary educational kit for training and demonstration of vascular surgical techniques.",
-    specs: [
-      "Purpose: Surgeon education and training",
-      "Technology: 3D printed anatomical structure",
-      "Material: Specialized biomedical materials",
-      "Realism: Mimics blood vessel properties",
-      "Version: Current + planned VAK PRO version",
-    ],
-    benefits: [
-      "Enables realistic training before operation",
-      "Improves surgeon skills",
-      "Reduces risk during first procedure",
-      "Ability to demonstrate difficult cases",
-      "Support for continuous education",
-      "Investment of €100,000 for VAK PRO version with advanced material",
-    ],
-  },
-};
+const valInvestigator = document.getElementById("modalInvestigator");
+const valTeam = document.getElementById("modalTeam");
+const valOrg = document.getElementById("modalOrganization");
+const valStart = document.getElementById("modalStart");
+const valDuration = document.getElementById("modalDuration");
+const valTrl = document.getElementById("modalTrl");
+const valFunding = document.getElementById("modalFunding");
+const valDescription = document.getElementById("modalDescription");
 
-const modal = document.getElementById("productModal");
-const modalBody = document.getElementById("modalBody");
-const closeBtn = document.querySelector(".close");
+function openProjectModal(button) {
+  const lang = currentLang;
+  const card = button.closest(".project-card");
+  const projectName = card ? card.querySelector("h3").textContent : "Project";
 
-// Open modal on product card click
-document.querySelectorAll(".product-card").forEach((card) => {
-  const detailsBtn = card.querySelector(".btn-details");
-  if (detailsBtn) {
-    detailsBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const productId = card.dataset.productId;
-      const product = productDetails[productId];
+  const descEl = card ? card.querySelector(".project-description") : null;
+  const description = descEl
+    ? descEl.getAttribute(`data-lang-${lang}`) || descEl.textContent || ""
+    : "";
 
-      if (product) {
-        modalBody.innerHTML = `
-                    <h2>${product.title}</h2>
-                    <p><strong>${product.description}</strong></p>
-                    
-                    <h3>Specifikacije:</h3>
-                    <ul>
-                        ${product.specs
-                          .map((spec) => `<li>${spec}</li>`)
-                          .join("")}
-                    </ul>
-                    
-                    <h3>Prednosti:</h3>
-                    <ul>
-                        ${product.benefits
-                          .map((benefit) => `<li>${benefit}</li>`)
-                          .join("")}
-                    </ul>
-                `;
-        modal.classList.add("show");
-      }
-    });
+  const investigator = button.dataset.investigator || "";
+  const team = button.dataset.team || "";
+  const org =
+    lang === "en"
+      ? button.dataset.organizationEn || ""
+      : button.dataset.organizationSr || "";
+  const startDate = button.dataset.startDate || "";
+  const duration =
+    lang === "en"
+      ? button.dataset.durationEn || ""
+      : button.dataset.durationSr || "";
+  const trlStart = button.dataset.trlStart || "";
+  const trlEnd = button.dataset.trlEnd || "";
+  const funding =
+    lang === "en"
+      ? button.dataset.fundingEn || button.dataset.funding || ""
+      : button.dataset.fundingSr || button.dataset.funding || "";
+
+  titleEl.textContent = projectName;
+
+  // Labels
+  if (labelDescription) {
+    labelDescription.textContent = lang === "en" ? "Description" : "Opis";
   }
-});
+  labelInvestigator.textContent =
+    lang === "en" ? "Principal Investigator" : "Glavni istraživač";
+  labelTeam.textContent = lang === "en" ? "Team" : "Tim";
+  labelOrg.textContent = lang === "en" ? "Organization" : "Organizacija";
+  labelTimeline.textContent = lang === "en" ? "Timeline" : "Vremenski okvir";
+  labelTrl.textContent = "TRL";
+  labelFunding.textContent = lang === "en" ? "Funding" : "Finansiranje";
 
-// Close modal
-closeBtn.addEventListener("click", () => {
-  modal.classList.remove("show");
-});
-
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.remove("show");
+  // Description
+  if (rowDescription && valDescription && description.trim()) {
+    valDescription.textContent = description.trim();
+    rowDescription.style.display = "block";
+  } else if (rowDescription) {
+    rowDescription.style.display = "none";
   }
+
+  // Values + vidljivost redova
+  if (investigator && investigator !== "TBD") {
+    valInvestigator.textContent = investigator;
+    rowInvestigator.style.display = "block";
+  } else {
+    rowInvestigator.style.display = "none";
+  }
+
+  if (team) {
+    valTeam.textContent = team;
+    rowTeam.style.display = "block";
+  } else {
+    rowTeam.style.display = "none";
+  }
+
+  if (org) {
+    valOrg.textContent = org;
+    rowOrg.style.display = "block";
+  } else {
+    rowOrg.style.display = "none";
+  }
+
+  if (startDate || duration) {
+    valStart.textContent = startDate
+      ? (lang === "en" ? "Start: " : "Početak: ") + startDate
+      : "";
+    valDuration.textContent = duration
+      ? (lang === "en" ? "Duration: " : "Trajanje: ") + duration
+      : "";
+    rowTimeline.style.display = "block";
+  } else {
+    rowTimeline.style.display = "none";
+  }
+
+  if (trlStart && trlEnd) {
+    valTrl.textContent = `${trlStart} → ${trlEnd}`;
+    rowTrl.style.display = "block";
+  } else {
+    rowTrl.style.display = "none";
+  }
+
+  if (funding) {
+    valFunding.textContent = funding;
+    rowFunding.style.display = "block";
+  } else {
+    rowFunding.style.display = "none";
+  }
+
+  // Ako baš nema ničega
+  if (
+    !description &&
+    !investigator &&
+    !team &&
+    !org &&
+    !startDate &&
+    !duration &&
+    !trlStart &&
+    !trlEnd &&
+    !funding
+  ) {
+    if (rowDescription) rowDescription.style.display = "none";
+    rowInvestigator.style.display = "none";
+    rowTeam.style.display = "none";
+    rowOrg.style.display = "none";
+    rowTimeline.style.display = "none";
+    rowTrl.style.display = "none";
+    rowFunding.style.display = "none";
+  }
+
+  modal.style.display = "block";
+}
+
+// Add click event to all project buttons
+document.querySelectorAll(".project-details-btn").forEach((btn) => {
+  btn.addEventListener("click", () => openProjectModal(btn));
 });
 
 // Hamburger Menu
@@ -371,6 +341,27 @@ scrollToTopBtn.addEventListener("click", function () {
 // Language Toggle Functionality
 let currentLang = localStorage.getItem("language") || "en";
 
+function truncateText(text, maxChars) {
+  const clean = (text || "").trim().replace(/\s+/g, " ");
+  if (!clean) return "";
+  if (clean.length <= maxChars) return clean;
+
+  const slice = clean.slice(0, Math.max(0, maxChars - 3));
+  const lastSpace = slice.lastIndexOf(" ");
+  const base = lastSpace > 40 ? slice.slice(0, lastSpace) : slice;
+  return base.trimEnd() + "...";
+}
+
+function updateProjectCardDescriptionPreviews(lang) {
+  document
+    .querySelectorAll(".project-card .project-description")
+    .forEach((el) => {
+      const full = el.getAttribute(`data-lang-${lang}`) || el.textContent || "";
+      // Only the preview gets truncated; full text remains in data-lang-* for the modal.
+      el.textContent = truncateText(full, 160);
+    });
+}
+
 function setLanguage(lang) {
   currentLang = lang;
   localStorage.setItem("language", lang);
@@ -433,11 +424,17 @@ function setLanguage(lang) {
     const langText = langToggle.querySelector(".lang-text");
     langText.textContent = lang === "en" ? "SR" : "EN";
   }
+
+  // After swapping language text, re-apply truncated previews on project cards
+  updateProjectCardDescriptionPreviews(lang);
 }
 
 // Initialize language on page load
 document.addEventListener("DOMContentLoaded", () => {
   setLanguage(currentLang);
+
+  // Ensure previews are truncated on first paint
+  updateProjectCardDescriptionPreviews(currentLang);
 
   // Add event listener to language toggle button
   const langToggle = document.getElementById("langToggle");
@@ -447,4 +444,29 @@ document.addEventListener("DOMContentLoaded", () => {
       setLanguage(newLang);
     });
   }
+
+  // Project Details Modal close behavior (scope to the project modal, not the product modal)
+  const projectModal = document.getElementById("modal");
+  const projectCloseBtn = projectModal
+    ? projectModal.querySelector(".close")
+    : null;
+
+  if (projectCloseBtn) {
+    projectCloseBtn.onclick = function () {
+      projectModal.style.display = "none";
+    };
+  }
+
+  window.addEventListener("click", function (event) {
+    if (event.target === projectModal) {
+      projectModal.style.display = "none";
+    }
+  });
+
+  // Close modal with ESC key
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && projectModal.style.display === "block") {
+      projectModal.style.display = "none";
+    }
+  });
 });
