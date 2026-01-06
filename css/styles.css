@@ -937,6 +937,10 @@ section h2 {
     margin-bottom: 4rem;
 }
 
+.service-category:last-child {
+    margin-bottom: 0;
+}
+
 .category-title {
     font-size: 1.75rem;
     color: var(--primary);

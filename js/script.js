@@ -201,10 +201,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute("href"));
     if (target) {
-      const offsetTop = target.offsetTop - 80; // Kompenzuj navbar
-      window.scrollTo({
-        top: offsetTop,
+      // CSS already applies `scroll-margin-top` for sticky navbar compensation.
+      target.scrollIntoView({
         behavior: "smooth",
+        block: "start",
       });
     }
   });
